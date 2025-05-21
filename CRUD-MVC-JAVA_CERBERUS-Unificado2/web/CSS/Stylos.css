@@ -1,0 +1,909 @@
+/* estilos generales */
+Body{
+    text-align: center;
+    background: linear-gradient(85deg, #1a29e5, #0ff, #ffffff);
+}
+
+main{
+    width: 85%;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.tablaBienvenida{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(128, 128, 128);
+}
+
+.tablaBienvenida div{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 5px;
+}
+
+.tablaBienvenida p{
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    background-color: rgb(0, 0, 139);
+    color: white;
+}
+
+.tablaBienvenida div p{
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
+    margin-left: 5px;
+    background-color: rgb(0, 0, 139);
+    color: white;
+}
+.tablaBienvenida div label{
+    border: 1px solid black;
+    font-size: 20px;
+    width: 70%;
+    margin-right: 5px;
+    background-color: white;
+}
+
+/* estilos de botones */
+.botonera{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.botonera a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(0, 0, 139);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.botonera a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+/* estilos del login */
+
+main div form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main div form input{
+    margin-bottom: 10px;
+    width: 90%;
+    height: 23px;
+    font-size: 20px
+}
+
+main div form label{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+main div form button{
+    width: 80%;
+    margin-top: 10px;
+    background-color: #007bff; /* Un color azul */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px; /* Redondeo suave */
+    cursor: pointer;
+    transition: transform 0.9s ease-in-out;
+}
+
+main div form button:hover {
+    background-color: blue;
+    opacity: 0.5;
+    transform: scale(1.05) translateY(2px);
+    border: 2px solid black;
+}
+
+/* estilos del index */
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: rgb(128, 128, 128);
+    margin: 10px;
+}
+
+.botones div{
+    width: 20%;
+    margin:0 5px;
+}
+
+.classListas {
+    position: relative;
+    display: inline-block;
+}
+
+.tituloLista {
+    cursor: pointer;
+    background-color: rgb(0, 0, 139);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tituloLista a{
+    color: white;
+    text-decoration: none;
+}
+
+.listaMenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    border: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.classListas:hover .listaMenu {
+    display: block;
+}
+
+.listaMenu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.listaMenu li a:hover {
+    background-color: #f0f0f0;
+}
+.classListas .tituloLista{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* estilos listas */
+
+/* Contenedor de tabla: ocupa 100% y permite scroll solo en pantallas pequeñas */
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+/* Tabla general */
+.tablaPersonas {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    table-layout: fixed;
+}
+
+/* Encabezados */
+.tablaPersonas thead {
+    background-color: #D3D3D3;
+    font-weight: bold;
+
+}
+
+/* Celdas */
+.tablaPersonas th, .tablaPersonas td {
+    padding: 12px 10px;
+    text-align: center;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+}
+
+/* Alternar colores en filas */
+.tablaPersonas tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tablaPersonas tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Acciones */
+.tablaPersonas td a {
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
+.tablaPersonas td a:hover {
+    background-color: #218838;
+}
+
+.tablaPersonas td a:last-child {
+    background-color: #dc3545;
+}
+
+.tablaPersonas td a:last-child:hover {
+    background-color: #c82333;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+/* ✅ Ajustes para pantallas grandes (768px o más) */
+@media screen and (min-width: 768px) {
+    .tablaPersonas {
+        table-layout: auto; /* Permite que las columnas usen su espacio necesario */
+        min-width: unset;
+    }
+
+    .tablaPersonas th, .tablaPersonas td {
+        white-space: normal;
+    }
+
+    .tabla-responsive {
+        overflow-x: hidden;
+    }
+}
+/*tabla item*/
+
+/* Contenedor de tabla: ocupa 100% y permite scroll solo en pantallas pequeñas */
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+
+/* Tabla general */
+.tablaItem {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    table-layout: auto;
+    min-width: fit-content;
+}
+
+
+/* Encabezados */
+.tablaItem thead {
+    background-color: #D3D3D3;
+    font-weight: bold;
+}
+
+/* Celdas */
+.tablaItem th, .tablaItem td {
+    padding: 12px 10px;
+    text-align: center;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+    font-size: 0.9em;
+}
+
+/* Alternar colores en filas */
+.tablaItem tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tablaItem tbody tr:hover {
+    background-color: #e0f7fa;
+}
+
+/* Acciones */
+.tablaItem td a {
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
+.tablaItem td a:hover {
+    background-color: #218838;
+}
+
+.tablaItem td a:last-child {
+    background-color: #dc3545;
+}
+
+.tablaItem td a:last-child:hover {
+    background-color: #c82333;
+}
+
+
+/* ✅ Ajustes para pantallas grandes (768px o más) */
+@media screen and (min-width: 768px) {
+    .tablaItem {
+        table-layout: fixed;
+        min-width: unset;
+    }
+
+    .tablaItem th, .tablaItem td {
+        white-space: normal;
+    }
+
+    .tablaItem .th1, .tablaItem .td1{
+        width: 5%;
+        white-space: nowrap;
+    }
+}
+
+/*Consultas*/
+
+/* consulta persona */
+.btn-Buscar{
+    background: rgb(128, 128, 128);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.labelBuscar{
+    background: rgb(0, 0, 139);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    width: 30%;
+}
+.inputText{
+    background: white;
+    font-size: 22px;
+    font-weight: bold;
+    width: 50%;
+
+}
+.inputBtn{
+    width: 20%;
+    background-color: rgb(240, 230, 140);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.inputBtn:hover {
+    background-color: rgb(245, 245, 245);
+    transform: scale(1.05);
+}
+
+/* tabla busqueda */
+.tabla-Busqueda {
+    display: flex;
+    padding: 10px;
+    background: rgb(128, 128, 128);
+}
+
+.tabla {
+    width: 80%;
+    border: 5px solid black;
+}
+.tabla2 {
+    width: 100%;
+    border: 5px solid black;
+}
+
+.tabla-Busqueda th{
+    width: 40%;
+    background: rgb(0, 0, 139);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.tabla-Busqueda td {
+    width: 60%;
+    background: white;
+    font-weight: bold;
+    font-size: 20px;
+    word-break: break-all;
+    max-width: 200px;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.botones-acciones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.btn-editar, .btn-remover {
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-editar {
+    background-color: #0074D9; /* Azul */
+}
+
+.btn-editar:hover {
+    background-color: #005fa3;
+}
+
+.btn-remover {
+    background-color: #FF4136; /* Rojo */
+}
+
+.btn-remover:hover {
+    background-color: #cc2c22;
+}
+
+.contenedor-Img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contenedor-Img p{
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.NoText{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*ediciones*/
+.class-ModificarDiv{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(128, 128, 128);
+    width: 100%;
+    padding: 10px;
+}
+
+.class-ModificarVar{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.class-ModificarVar p{
+    width: 30%;
+    height: 27px;
+    background-color: rgb(0, 0, 139);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    align-items: center;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.class-ModificarVar input, select{
+    width: 67%;
+    height: 27px;
+    border: 2px solid black;
+    margin: 5px 0;
+    padding-left: 10px;
+}
+
+select{
+    font-size: 20px;
+    width: 70%;
+}
+
+.var-InpAgrerar .inputAgregar{
+    height: 40px;
+    background-color: rgb(240, 230, 140);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.var-InpAgrerar .inputAgregar:hover{
+    background-color: rgb(245, 245, 245);
+    transform: scale(1.05);
+}
+
+/* estilos asignar*/
+.botonUnificar {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonUnificar:hover {
+    background-color: #45a049;
+    color: black;
+    transform: scale(1.05);
+}
+
+.tablaAsignar {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.tablaAsignar th, .tablaAsignar td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.tablaAsignar th {
+    background-color:#D3D3D3;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tablaAsignar tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tablaAsignar tr:hover {
+    background-color: #e6f7ff;
+}
+
+.mensajeError {
+    color: black;
+    background-color: #ffdddd;
+    border: 1px solid #d8000c;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+/*estilos subir img*/
+.subirImg {
+    font-size: 21px;
+    font-family: Arial;
+}
+.subirImg input{
+    font-size: 21px;
+}
+
+
+.subirImg button{
+    background-color: rgb(240, 230, 140);
+    color: black;
+    font-weight: bold;
+    font-size: 21px;
+
+
+    padding: 8px 20px;
+
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.subirImg button:hover {
+    background-color: rgb(245, 245, 245);
+    transform: scale(1.05);
+}
+
+.cambiarPg{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cambiarPg form button{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(0, 0, 139);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* listar registros*/
+.form-busqueda-cerberus {
+    height: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #002147; /* Azul oscuro Cerberus */
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 0 0 0 20px;
+}
+
+.form-busqueda-cerberus .campo {
+    display: flex;
+    flex-direction: row;
+    width: 24%;
+    align-items: center;
+}
+
+.form-busqueda-cerberus label {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form-busqueda-cerberus input,
+.form-busqueda-cerberus select {
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    background-color: #f1f1f1;
+    margin: 10px 5px;
+}
+
+.form-busqueda-cerberus button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+    margin: 10px 5px;
+}
+
+.form-busqueda-cerberus button:hover {
+    background-color: #0056b3;
+}
+
+.paginacion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.paginacion a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #ddd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.paginacion a:hover {
+    background-color: #888;
+    color: #fff;
+}
+
+.paginacion p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.div-Autoriz{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgb(128, 128, 128);
+}
+
+.divAutorizarVar{
+    margin: 10px;
+}
+
+.div-Autoriz input{
+    font-size: 20px;
+}
+
+.div-Autoriz .p-Observaciones{
+    margin-bottom: 75px
+}
+
+.input-Observaciones {
+    width: 67%;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    resize: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow-y: auto;
+}
+
+.div-IngreSalid{
+    display: flex;
+    width: 70%;
+    gap: 20px;
+}
+
+.form-position{
+    position: relative;
+}
+
+.form-position h2{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 100px;
+    margin: 20px 0;
+}
+.form-PositionAbsulute{
+    position: absolute;
+    top: 10px;
+    right: 100px;
+}
+
+.form-AccionIngOtros input{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(240, 230, 140);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-AccionIngOtros input:hover {
+    background-color: rgb(245, 245, 245);
+    transform: scale(1.05);
+}
+
+.div-IngreSalid .btn-editar, .div-IngreSalid .btn-remover{
+    height: 40px;
+}
+
+.div-AutorizNot{
+    background: rgb(128, 128, 128);
+    padding: 10px;
+}
+
+.class-VarContenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-AutorizNot .p-Observaciones {
+    margin-bottom: 75px;
+}
+
+.varDiv-IngreSalid{
+    display: flex;
+    justify-content: center;
+}
+
+.varDiv-IngreSalid .div-IngreSalid{
+    justify-content: center;
+}
+.varDiv-IngreSalid .div-IngreSalid .btn-editar, .varDiv-IngreSalid .div-IngreSalid .btn-remover{
+    width: 300px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.divform-AccionIngOtros{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+}
+
+.divform-AccionIngOtros p{
+    width: 60%;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+.divform-AccionIngOtros input{
+    margin: 0;
+}
+
+.tabla-Busqueda .tabla-responsive .tablaOtros{
+    width: 100%;
+}
+
+.tabla-Busqueda .tabla-responsive .tablaOtros th, .tabla-Busqueda .tabla-responsive .tablaOtros td{
+    font-size: 18px;
+    width: 16.6%;
+}
+
+.tabla-responsive .tablaItemsOtros{
+    width: 100%;
+    border: 2px solid black;
+}
+.tabla-responsive .tablaItemsOtros th, .tabla-Busqueda .tabla-responsive .tablaItemsOtros td{
+
+}
+.tabla-responsive .tablaItemsOtros thead, .tabla-Busqueda .tabla-responsive .tablaItemsOtros tbody{
+    border: 2px solid black;
+
+}
+
+.tabla-responsive .tablaItemsOtros th{
+    background: rgb(210, 210, 210);
+}
+
+.tabla-responsive .tablaItemsOtros input{
+    width: 97%;
+    font-size: 18px;
+
+}
+
+.contenedor-Limpiar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
